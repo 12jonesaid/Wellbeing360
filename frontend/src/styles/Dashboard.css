@@ -1,0 +1,580 @@
+.dashboard-root {
+  font-family: var(--font-sans);
+  color: var(--green-900);
+  min-height: 100vh;
+  background: linear-gradient(180deg, var(--bg) 0%, #f6fbf6 60%);
+  padding: 2rem 1.5rem 3rem;
+  max-width: 1360px;
+  margin: 0 auto;
+}
+
+.dash-premium-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.5rem;
+  background: white;
+  border: 1px solid rgba(30, 95, 52, 0.08);
+  border-radius: 32px;
+  padding: 2rem;
+  color: var(--green-900);
+  box-shadow: 0 22px 48px rgba(18, 73, 37, 0.08);
+  flex-wrap: wrap;
+}
+
+.header-greeting {
+  max-width: 720px;
+}
+
+.greeting-row h1 {
+  font-size: clamp(2.2rem, 2.6vw, 3.2rem);
+  margin: 0;
+  line-height: 1.05;
+}
+
+.verified-check {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #10b981;
+  color: white;
+  border-radius: 9999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.9rem;
+  margin-left: 0.85rem;
+  font-weight: 700;
+}
+
+.greeting-sub {
+  margin-top: 0.75rem;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 620px;
+}
+
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+.premium-icon-btn {
+  position: relative;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #f8fafc;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.premium-icon-btn:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.13);
+}
+
+.bell-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background: #22c55e;
+  box-shadow: 0 0 0 4px rgba(34, 197, 94, 0.2);
+}
+
+.bell-dropdown {
+  position: absolute;
+  right: 0;
+  top: 68px;
+  width: 320px;
+  background: #ffffff;
+  color: #0f172a;
+  border-radius: 28px;
+  box-shadow: 0 25px 60px rgba(15, 23, 42, 0.18);
+  padding: 1.25rem;
+  z-index: 20;
+}
+
+.bell-dropdown h4 {
+  margin: 0 0 0.85rem;
+  font-size: 0.95rem;
+  color: #0f172a;
+}
+
+.bell-item {
+  margin-bottom: 0.85rem;
+  padding: 0.9rem 1rem;
+  border-radius: 22px;
+  background: #f8fafc;
+  color: #0f172a;
+  font-size: 0.94rem;
+}
+
+.premium-avatar {
+  width: 62px;
+  height: 62px;
+  border-radius: 24px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #14b8a6, #22c55e);
+  font-weight: 800;
+  color: white;
+  font-size: 1.25rem;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.25);
+}
+
+.dash-premium-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.75rem;
+}
+
+.premium-card {
+  background: white;
+  border: 1px solid rgba(30, 95, 52, 0.08);
+  border-radius: 32px;
+  padding: 1.75rem;
+  color: var(--green-900);
+  box-shadow: 0 18px 40px rgba(18, 73, 37, 0.08);
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-header-row h3 {
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0.9;
+}
+
+.badge-pill {
+  padding: 0.55rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--green-900);
+  background: rgba(30, 95, 52, 0.12);
+}
+
+.progress-badge {
+  background: rgba(16, 185, 129, 0.16);
+}
+
+.calorie-badge {
+  background: rgba(16, 185, 129, 0.17);
+}
+
+.weight-trend-label {
+  color: #334155;
+  letter-spacing: -0.03em;
+}
+
+.weight-unit,
+.calorie-unit {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.weight-sub-metrics,
+.progress-details-text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  color: #475569;
+}
+
+.weight-diff,
+.calorie-left-indicator {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.weight-helper,
+.calorie-tip {
+  color: #475569;
+.weight-log-form {
+  margin-top: 1.75rem;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.85rem;
+}
+
+.weight-log-form input {
+  min-width: 0;
+  padding: 1rem 1.1rem;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.08);
+  color: white;
+  font-size: 0.97rem;
+}
+
+.weight-log-form input::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+
+.weight-log-form button {
+  border: none;
+  border-radius: 18px;
+  background: linear-gradient(135deg, #14b8a6, #22c55e);
+  color: white;
+  font-weight: 700;
+  padding: 1rem 1.35rem;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.weight-log-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(34, 197, 94, 0.25);
+}
+
+.progress-content-layout {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.75rem;
+  align-items: center;
+}
+
+.dashboard-wellbeing-card {
+  background: linear-gradient(180deg, rgba(15, 23, 42, 0.96), rgba(15, 23, 42, 0.88));
+}
+
+.wellbeing-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.wellbeing-card-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #94a3b8;
+  margin-bottom: 0.35rem;
+}
+
+.trend-pill {
+  padding: 0.75rem 1.2rem;
+  border-radius: 9999px;
+  background: rgba(34, 197, 94, 0.18);
+  color: #dcfce7;
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+.circular-progress-wrap {
+  position: relative;
+  width: 180px;
+  height: 180px;
+}
+
+.svg-circle-progress {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.circle-bg,
+.circle-fill {
+  fill: none;
+  stroke-width: 10;
+  stroke-linecap: round;
+}
+
+.circle-bg {
+  stroke: rgba(255, 255, 255, 0.12);
+}
+
+.circle-fill {
+  stroke: #22c55e;
+  stroke-dasharray: 251.2;
+  stroke-dashoffset: 55;
+  transition: stroke-dashoffset 0.6s ease;
+}
+
+.progress-percentage-label {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: #f8fafc;
+}
+
+.percentage-num {
+  font-size: 3rem;
+  font-weight: 800;
+  color: white;
+}
+
+.wellbeing-chart-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.wellbeing-note {
+  margin-top: 1.25rem;
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}
+
+.sparkline-chart-container {
+  margin-top: 0;
+  padding: 1.2rem;
+  border-radius: 26px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.sparkline-svg {
+  width: 100%;
+  height: 130px;
+}
+
+.sparkline-line {
+  stroke: #22c55e;
+  fill: none;
+}
+
+.sparkline-area {
+  fill: url(#sparklineGrad);
+}
+
+.pulsing-spark-dot {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.6; }
+}
+
+.calorie-display-wrap {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.meal-content-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.meal-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.meal-title {
+  margin: 0;
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.meal-calories {
+  color: #94a3b8;
+  font-size: 0.95rem;
+}
+
+.meal-add-btn {
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 18px;
+  background: var(--green-700);
+  color: white;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.meal-add-btn:hover {
+  transform: translateY(-2px);
+}
+
+.macro-pill {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0.85rem 1rem;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+/* Modal for quick-add forms */
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(2,6,23,0.6);
+  display: grid;
+  place-items: center;
+  z-index: 60;
+}
+
+.modal-panel {
+  width: 100%;
+  max-width: 680px;
+  background: white;
+  border-radius: 16px;
+  padding: 1.25rem;
+  box-shadow: 0 30px 80px rgba(2,6,23,0.6);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+
+.dashboard-stats-badges-section {
+  margin-top: 2.25rem;
+}
+
+.dashboard-stats-badges-section h2 {
+  color: #0f172a;
+  font-size: 1.6rem;
+  margin-bottom: 1.25rem;
+  font-weight: 800;
+}
+
+.stats-badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.stats-badge-card {
+  background: #ffffff;
+  border-radius: 28px;
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: center;
+  box-shadow: 0 20px 50px rgba(15, 23, 42, 0.08);
+}
+
+.badge-icon {
+  width: 58px;
+  height: 58px;
+  border-radius: 20px;
+  display: grid;
+  place-items: center;
+  color: white;
+}
+
+.icon-workout { background: linear-gradient(135deg, #16a34a, #22c55e); }
+.icon-nutrition { background: linear-gradient(135deg, #22c55e, #86efac); }
+.icon-mood { background: linear-gradient(135deg, #1e5f34, #124925); }
+
+.badge-info h4 {
+  margin: 0 0 0.35rem;
+  font-size: 1rem;
+  color: #0f172a;
+}
+
+.badge-value {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #111827;
+}
+
+.badge-sub {
+  margin: 0.35rem 0 0;
+  color: #475569;
+
+.promo-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.promo-left h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  color: #0f172a;
+}
+
+.promo-left p {
+  margin: 0;
+  color: #475569;
+}
+
+.btn-promo-claim {
+  border: none;
+  border-radius: 22px;
+  background: linear-gradient(135deg, #1e5f34, #16a34a);
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-promo-claim:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
+}
+
+@media (max-width: 1024px) {
+  .dash-premium-grid,
+  .stats-badges-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .dash-premium-header {
+    padding: 1.75rem;
+  }
+
+  .dash-premium-header,
+  .premium-card,
+  .stats-badge-card,
+  .dash-promo-banner {
+    border-radius: 24px;
+  }
+
+  .dash-premium-grid {
+    gap: 1rem;
+  }
+
+  .content {
+    padding: 1rem;
+  }
+
+  .card-header-row {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
