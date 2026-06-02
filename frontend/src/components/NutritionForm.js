@@ -111,7 +111,10 @@ export default function NutritionForm({ user, onSuccess }) {
         <div className="estimate-helper">
           <div className="estimate-heading">
             <strong>Not sure how many calories?</strong>
-            <span>Select a quick estimate for this meal type.</span>
+            <span>
+              Use the quick meal examples below, or enter protein, carbs, and fat to calculate calories automatically.
+              Calories = protein×4 + carbs×4 + fat×9.
+            </span>
           </div>
           <div className="estimate-buttons">
             {calorieEstimates

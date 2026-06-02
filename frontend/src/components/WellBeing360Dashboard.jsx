@@ -110,7 +110,7 @@ export default function WellBeing360Dashboard({ user }) {
             </svg>
             <div className="progress-percentage-label">
               <span className="percentage-num">78%</span>
-              <span>of your wellbeing goal</span>
+              <span className="percentage-subtext">of your wellbeing goal</span>
             </div>
           </div>
 
@@ -118,15 +118,19 @@ export default function WellBeing360Dashboard({ user }) {
             <p className="weight-trend-label">Your mood, nutrition, and movement are aligned this week.</p>
             <div className="sparkline-chart-container">
               <svg className="sparkline-svg" viewBox="0 0 300 120" preserveAspectRatio="none">
-                <defs>
-                  <linearGradient id="sparklineGrad" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stopColor="#22c55e" stopOpacity="0.35" />
-                    <stop offset="100%" stopColor="#22c55e" stopOpacity="0" />
-                  </linearGradient>
-                </defs>
-                <path className="sparkline-area" d="M0,92 C70,70 120,62 170,72 C220,82 250,60 300,50 L300,120 L0,120 Z" />
+                <g className="sparkline-grid">
+                  <line x1="0" y1="24" x2="300" y2="24" />
+                  <line x1="0" y1="60" x2="300" y2="60" />
+                  <line x1="0" y1="96" x2="300" y2="96" />
+                </g>
                 <path className="sparkline-line" d="M0,92 C70,70 120,62 170,72 C220,82 250,60 300,50" fill="none" strokeWidth="4" />
-                <circle className="pulsing-spark-dot" cx="300" cy="50" r="6" fill="#22c55e" />
+                <circle className="sparkline-point" cx="0" cy="92" r="4" />
+                <circle className="sparkline-point" cx="70" cy="70" r="4" />
+                <circle className="sparkline-point" cx="120" cy="62" r="4" />
+                <circle className="sparkline-point" cx="170" cy="72" r="4" />
+                <circle className="sparkline-point" cx="220" cy="82" r="4" />
+                <circle className="sparkline-point" cx="250" cy="60" r="4" />
+                <circle className="sparkline-point" cx="300" cy="50" r="4" />
               </svg>
             </div>
             <div className="wellbeing-note">
@@ -139,7 +143,10 @@ export default function WellBeing360Dashboard({ user }) {
       <section className="premium-card meal-content-wrap">
         <div>
           <p className="meal-title">Add a quick meal</p>
-          <p className="meal-calories">Need help estimating calories? Use the meal helper in Nutrition.</p>
+          <p className="meal-calories">
+            If you’re not sure what to enter, open Nutrition and use the quick meal estimates or enter protein/carbs/fat.
+            The app will calculate calories for you.
+          </p>
         </div>
         <button className="meal-add-btn" type="button">+</button>
       </section>
