@@ -47,7 +47,7 @@
 
 .greeting-sub {
   margin-top: 0.75rem;
-  color: #cbd5e1;
+  color: #475569;
   font-size: 1rem;
   line-height: 1.7;
   max-width: 620px;
@@ -210,6 +210,8 @@
 .weight-helper,
 .calorie-tip {
   color: #475569;
+}
+
 .weight-log-form {
   margin-top: 1.75rem;
   display: grid;
@@ -270,7 +272,7 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.18em;
-  color: #94a3b8;
+  color: #86efac;
   margin-bottom: 0.35rem;
 }
 
@@ -320,12 +322,18 @@
   place-items: center;
   text-align: center;
   color: #f8fafc;
+  gap: 0.35rem;
 }
 
 .percentage-num {
   font-size: 3rem;
   font-weight: 800;
   color: white;
+}
+
+.percentage-subtext {
+  font-size: 0.95rem;
+  color: #d1fae5;
 }
 
 .wellbeing-chart-panel {
@@ -336,7 +344,7 @@
 
 .wellbeing-note {
   margin-top: 1.25rem;
-  color: #cbd5e1;
+  color: #d1fae5;
   font-size: 0.95rem;
 }
 
@@ -353,17 +361,26 @@
   height: 130px;
 }
 
+.sparkline-grid line {
+  stroke: rgba(255, 255, 255, 0.14);
+  stroke-dasharray: 4 8;
+}
+
 .sparkline-line {
-  stroke: #22c55e;
+  stroke: #7dd3fc;
   fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .sparkline-area {
-  fill: url(#sparklineGrad);
+  display: none;
 }
 
-.pulsing-spark-dot {
-  animation: pulse 2s infinite ease-in-out;
+.sparkline-point {
+  fill: #7dd3fc;
+  stroke: rgba(255, 255, 255, 0.95);
+  stroke-width: 2;
 }
 
 @keyframes pulse {
@@ -399,7 +416,7 @@
 }
 
 .meal-calories {
-  color: #94a3b8;
+  color: #86efac;
   font-size: 0.95rem;
 }
 
@@ -515,6 +532,7 @@
 .badge-sub {
   margin: 0.35rem 0 0;
   color: #475569;
+}
 
 .promo-left {
   display: flex;
