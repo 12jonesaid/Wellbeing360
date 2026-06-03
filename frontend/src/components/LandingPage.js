@@ -4,7 +4,7 @@ import '../styles/LandingPage.css';
 import appLogoImg from '../assets/app_logo.jpg';
 import landingHeroImg from '../assets/landing_hero.png';
 
-export default function LandingPage({ onNavigate }) {
+export default function LandingPage({ onNavigate, currentPage = 'home' }) {
   return (
     <div className="landing-page">
       <nav className="landing-nav">
@@ -14,19 +14,19 @@ export default function LandingPage({ onNavigate }) {
         </div>
 
         <div className="nav-actions">
-          <button className="nav-link" onClick={() => onNavigate('home')}>
+          <button className={`nav-link ${currentPage === 'home' ? 'active' : ''}`} onClick={() => onNavigate('home')}>
             Home
           </button>
-          <button className="nav-link" onClick={() => onNavigate('mood')}>
+          <button className={`nav-link ${currentPage === 'mood' ? 'active' : ''}`} onClick={() => onNavigate('mood')}>
             Mood
           </button>
-          <button className="nav-link" onClick={() => onNavigate('features')}>
+          <button className={`nav-link ${currentPage === 'features' ? 'active' : ''}`} onClick={() => onNavigate('features')}>
             Exercises
           </button>
-          <button className="nav-link" onClick={() => onNavigate('healthtips')}>
+          <button className={`nav-link ${currentPage === 'healthtips' ? 'active' : ''}`} onClick={() => onNavigate('healthtips')}>
             Health Tips
           </button>
-          <button className="nav-link" onClick={() => onNavigate('about')}>
+          <button className={`nav-link ${currentPage === 'about' ? 'active' : ''}`} onClick={() => onNavigate('about')}>
             About Us
           </button>
           <button className="btn-secondary" onClick={() => onNavigate('signup')}>

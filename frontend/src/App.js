@@ -67,7 +67,7 @@ function App() {
     if (page === 'healthtips') {
       return <HealthTipsPage onNavigate={setPage} />;
     }
-    return <LandingPage onNavigate={setPage} />;
+    return <LandingPage onNavigate={setPage} currentPage={page} />;
   }
 
   return (
