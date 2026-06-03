@@ -9,7 +9,7 @@ export default function WellBeing360Dashboard({ user }) {
       <section className="dash-premium-header">
         <div className="header-greeting">
           <div className="greeting-row">
-            <h1>Welcome back, {displayName}.</h1>
+            <h1>Hello, {displayName}.</h1>
             <span className="verified-check">Verified student</span>
           </div>
           <p className="greeting-sub">
@@ -40,62 +40,62 @@ export default function WellBeing360Dashboard({ user }) {
         <div className="premium-card">
           <div className="card-header-row">
             <h3>Daily Mood</h3>
-            <span className="badge-pill progress-badge">85% happy</span>
+            <span className="badge-pill progress-badge">0% tracked</span>
           </div>
           <div className="weight-main-value">
-            <span className="weight-num">8.5</span>
+            <span className="weight-num">0</span>
             <span className="weight-unit">/ 10</span>
           </div>
           <div className="weight-sub-metrics">
-            <span className="weight-diff">Stable since yesterday</span>
-            <span className="weight-helper">Keep logging your mood to improve your week.</span>
+            <span className="weight-diff">No data yet</span>
+            <span className="weight-helper">Start logging your mood to track patterns.</span>
           </div>
         </div>
 
         <div className="premium-card">
           <div className="card-header-row">
             <h3>Nutrition Balance</h3>
-            <span className="badge-pill calorie-badge">1,750 kcal</span>
+            <span className="badge-pill calorie-badge">0 kcal</span>
           </div>
           <div className="calorie-display-wrap">
             <div>
-              <p className="calorie-num">1,750</p>
+              <p className="calorie-num">0</p>
               <p className="calorie-unit">Calories today</p>
             </div>
           </div>
           <div className="weight-sub-metrics">
-            <span className="calorie-left-indicator">300 kcal under goal</span>
-            <span className="calorie-tip">Try adding a protein snack before evening study.</span>
+            <span className="calorie-left-indicator">No entries yet</span>
+            <span className="calorie-tip">Log your first meal to get started.</span>
           </div>
         </div>
 
         <div className="premium-card">
           <div className="card-header-row">
             <h3>Workout Progress</h3>
-            <span className="badge-pill">+12% this week</span>
+            <span className="badge-pill">0% this week</span>
           </div>
           <div className="weight-main-value">
-            <span className="weight-num">4</span>
+            <span className="weight-num">0</span>
             <span className="weight-unit">Workouts</span>
           </div>
           <div className="weight-sub-metrics">
-            <span className="weight-diff">3 planned sessions left</span>
-            <span className="weight-helper">Keep the momentum going with short daily exercises.</span>
+            <span className="weight-diff">Ready to start?</span>
+            <span className="weight-helper">Log your first workout to begin tracking.</span>
           </div>
         </div>
 
         <div className="premium-card">
           <div className="card-header-row">
             <h3>Daily Focus</h3>
-            <span className="badge-pill">Healthy habits</span>
+            <span className="badge-pill">Getting started</span>
           </div>
           <div className="weight-main-value">
-            <span className="weight-num">92%</span>
+            <span className="weight-num">0%</span>
             <span className="weight-unit">Goal completion</span>
           </div>
           <div className="weight-sub-metrics">
-            <span className="weight-diff">2 habits added</span>
-            <span className="weight-helper">Use the quick add buttons to log meals, moods, and workouts.</span>
+            <span className="weight-diff">No goals set yet</span>
+            <span className="weight-helper">Create your first habit to start your wellness journey.</span>
           </div>
         </div>
       </div>
