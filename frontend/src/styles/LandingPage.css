@@ -147,7 +147,6 @@
 .nav-link.active {
   background: rgba(30, 95, 52, 0.15);
   color: var(--green-700);
-  font-weight: 800;
 }
 
 /* Main Container */
