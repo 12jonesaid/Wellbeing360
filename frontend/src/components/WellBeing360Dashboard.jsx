@@ -183,13 +183,6 @@ export default function WellBeing360Dashboard({ user }) {
         </div>
       </section>
 
-      <section className="dash-promo-banner">
-        <div className="promo-left">
-          <h3>Ready for your next wellness win?</h3>
-          <p>Open the Mood, Nutrition, or Workout tab to add entries and keep your progress steady.</p>
-        </div>
-        <button className="btn-promo-claim" type="button">Go to quick entry</button>
-      </section>
     </div>
   );
 }
