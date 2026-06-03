@@ -1,0 +1,15 @@
+.detail-page {
+  padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.detail-page h1 {
+  color: #124925;
+  margin-bottom: 1rem;
+}
+
+.detail-page p {
+  color: #475569;
+  font-size: 1rem;
+}

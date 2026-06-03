@@ -157,7 +157,8 @@ export default function WellBeing360Dashboard({ user, onNavigate }) {
         </div>
       </section>
 
-      <section classZero data right now. Log your mood, meals, and workouts to build your wellness story!
+      <section className="dashboard-empty-state">
+        <p>Zero data right now. Log your mood, meals, and workouts to build your wellness story!</p>
         <div>
           <p className="meal-title">Add a quick meal</p>
           <p className="meal-calories">

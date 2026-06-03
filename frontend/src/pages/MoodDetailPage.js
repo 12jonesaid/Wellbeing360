@@ -42,9 +42,6 @@ export default function MoodDetailPage({ user, onNavigate }) {
     ? (moodEntries.reduce((sum, entry) => sum + entry.mood, 0) / moodEntries.length).toFixed(1)
     : 0;
 
-  const rawName = user?.name || 'Student';
-  const displayName = rawName.trim().toLowerCase() === 'james' ? 'Student' : rawName;
-
   return (
     <div className="detail-page-root">
       <section className="detail-header">
