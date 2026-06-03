@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/LandingPage.css';
 import appLogoImg from '../assets/app_logo.jpg';
+import moodStudentsImg from '../assets/mood_students.png';
 
 export default function MoodPage({ onNavigate }) {
   return (
@@ -49,13 +50,7 @@ export default function MoodPage({ onNavigate }) {
             </div>
           </div>
           <div className="hero-right about-right">
-            <h2>Turn feelings into better routines.</h2>
-            <p>
-              The app collects your mood entries and shows you meaningful patterns, so you can adjust rest, study, and exercise with smarter decisions.
-            </p>
-            <p>
-              This makes the mood tracker more than a diary — it becomes a tool for staying balanced through campus life.
-            </p>
+            <img src={moodStudentsImg} alt="Students tracking mood" style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
           </div>
         </section>
       </main>
