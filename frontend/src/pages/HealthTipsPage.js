@@ -1,6 +1,7 @@
 import React from 'react';
 import '../styles/LandingPage.css';
 import appLogoImg from '../assets/app_logo.jpg';
+import healthTipsImg from '../assets/health_tips.jpg';
 
 export default function HealthTipsPage({ onNavigate }) {
   return (
@@ -56,6 +57,9 @@ export default function HealthTipsPage({ onNavigate }) {
                 <p>Get short workout recommendations that fit busy days without adding pressure.</p>
               </article>
             </div>
+          </div>
+          <div className="hero-right about-right">
+            <img src={healthTipsImg} alt="Health tips for students" style={{ width: '100%', borderRadius: '12px', objectFit: 'cover' }} />
           </div>
         </section>
       </main>
