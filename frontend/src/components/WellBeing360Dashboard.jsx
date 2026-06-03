@@ -104,25 +104,25 @@ export default function WellBeing360Dashboard({ user }) {
         <div className="wellbeing-card-header">
           <div>
             <p className="wellbeing-card-label">Weekly wellbeing score</p>
-            <h3>78% of goal reached</h3>
+            <h3>0% of goal reached</h3>
           </div>
-          <span className="trend-pill">Trend +7%</span>
+          <span className="trend-pill">Trend 0%</span>
         </div>
 
         <div className="progress-content-layout">
           <div className="circular-progress-wrap">
             <svg className="svg-circle-progress" viewBox="0 0 100 100">
               <circle className="circle-bg" cx="50" cy="50" r="40" />
-              <circle className="circle-fill" cx="50" cy="50" r="40" style={{ strokeDashoffset: '40' }} />
+              <circle className="circle-fill" cx="50" cy="50" r="40" style={{ strokeDashoffset: '251' }} />
             </svg>
             <div className="progress-percentage-label">
-              <span className="percentage-num">78%</span>
+              <span className="percentage-num">0%</span>
               <span className="percentage-subtext">of your wellbeing goal</span>
             </div>
           </div>
 
           <div className="wellbeing-chart-panel">
-            <p className="weight-trend-label">Your mood, nutrition, and movement are aligned this week.</p>
+            <p className="weight-trend-label">Start tracking to see your wellness trends and progress.</p>
             <div className="sparkline-chart-container">
               <svg className="sparkline-svg" viewBox="0 0 300 120" preserveAspectRatio="none">
                 <g className="sparkline-grid">
@@ -130,14 +130,8 @@ export default function WellBeing360Dashboard({ user }) {
                   <line x1="0" y1="60" x2="300" y2="60" />
                   <line x1="0" y1="96" x2="300" y2="96" />
                 </g>
-                <path className="sparkline-line" d="M0,92 C70,70 120,62 170,72 C220,82 250,60 300,50" fill="none" strokeWidth="4" />
-                <circle className="sparkline-point" cx="0" cy="92" r="4" />
-                <circle className="sparkline-point" cx="70" cy="70" r="4" />
-                <circle className="sparkline-point" cx="120" cy="62" r="4" />
-                <circle className="sparkline-point" cx="170" cy="72" r="4" />
-                <circle className="sparkline-point" cx="220" cy="82" r="4" />
-                <circle className="sparkline-point" cx="250" cy="60" r="4" />
-                <circle className="sparkline-point" cx="300" cy="50" r="4" />
+                <path className="sparkline-line" d="M0,100 L300,100" fill="none" strokeWidth="4" />
+                <circle className="sparkline-point" cx="0" cy="100" r="4" />
               </svg>
             </div>
             <div className="wellbeing-note">
@@ -147,7 +141,7 @@ export default function WellBeing360Dashboard({ user }) {
         </div>
       </section>
 
-      <section className="premium-card meal-content-wrap">
+      <section classZero data right now. Log your mood, meals, and workouts to build your wellness story!
         <div>
           <p className="meal-title">Add a quick meal</p>
           <p className="meal-calories">
@@ -165,8 +159,8 @@ export default function WellBeing360Dashboard({ user }) {
             <div className="badge-icon icon-workout">💪</div>
             <div className="badge-info">
               <h4>Energy boost</h4>
-              <p className="badge-value">Active 58 min</p>
-              <p className="badge-sub">Walk, yoga, or strength session</p>
+              <p className="badge-value">0 min active</p>
+              <p className="badge-sub">No workouts logged yet</p>
             </div>
           </div>
 
@@ -174,8 +168,8 @@ export default function WellBeing360Dashboard({ user }) {
             <div className="badge-icon icon-nutrition">🥗</div>
             <div className="badge-info">
               <h4>Nutrition summary</h4>
-              <p className="badge-value">3 meals logged</p>
-              <p className="badge-sub">Balanced carbs, protein, and fats</p>
+              <p className="badge-value">0 meals logged</p>
+              <p className="badge-sub">Start tracking your meals</p>
             </div>
           </div>
 
@@ -183,8 +177,8 @@ export default function WellBeing360Dashboard({ user }) {
             <div className="badge-icon icon-mood">😊</div>
             <div className="badge-info">
               <h4>Mood boost</h4>
-              <p className="badge-value">Consistent 4 days</p>
-              <p className="badge-sub">Stay mindful with short breaks</p>
+              <p className="badge-value">0 days tracked</p>
+              <p className="badge-sub">Begin logging your mood today</p>
             </div>
           </div>
         </div>
