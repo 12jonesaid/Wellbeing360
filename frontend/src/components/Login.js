@@ -27,7 +27,7 @@ export default function Login({ onLogin, onBack, defaultMode = 'login' }) {
 
       onLogin(response.data);
     } catch (err) {
-      setError(err.response?.data?.message || err.response?.data?.error || 'Unable to authenticate. Please try again.');
+      setError(err.response?.data?.error || err.response?.data?.message || 'Unable to authenticate. Please try again.');
     } finally {
       setLoading(false);
     }

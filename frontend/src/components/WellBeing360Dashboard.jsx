@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function WellBeing360Dashboard({ user }) {
+export default function WellBeing360Dashboard({ user, onNavigate }) {
   const rawName = user?.name || 'Student';
   const displayName = rawName.trim().toLowerCase() === 'james' ? 'Student' : rawName;
 
@@ -37,7 +37,11 @@ export default function WellBeing360Dashboard({ user }) {
       </section>
 
       <div className="dash-premium-grid">
-        <div className="premium-card">
+        <button 
+          className="premium-card clickable-card"
+          onClick={() => onNavigate('moodDetail')}
+          style={{ cursor: 'pointer', border: 'none', padding: 0, background: 'none' }}
+        >
           <div className="card-header-row">
             <h3>Daily Mood</h3>
             <span className="badge-pill progress-badge">0% tracked</span>
@@ -50,9 +54,13 @@ export default function WellBeing360Dashboard({ user }) {
             <span className="weight-diff">No data yet</span>
             <span className="weight-helper">Start logging your mood to track patterns.</span>
           </div>
-        </div>
+        </button>
 
-        <div className="premium-card">
+        <button 
+          className="premium-card clickable-card"
+          onClick={() => onNavigate('nutritionDetail')}
+          style={{ cursor: 'pointer', border: 'none', padding: 0, background: 'none' }}
+        >
           <div className="card-header-row">
             <h3>Nutrition Balance</h3>
             <span className="badge-pill calorie-badge">0 kcal</span>
@@ -67,9 +75,13 @@ export default function WellBeing360Dashboard({ user }) {
             <span className="calorie-left-indicator">No entries yet</span>
             <span className="calorie-tip">Log your first meal to get started.</span>
           </div>
-        </div>
+        </button>
 
-        <div className="premium-card">
+        <button 
+          className="premium-card clickable-card"
+          onClick={() => onNavigate('workoutDetail')}
+          style={{ cursor: 'pointer', border: 'none', padding: 0, background: 'none' }}
+        >
           <div className="card-header-row">
             <h3>Workout Progress</h3>
             <span className="badge-pill">0% this week</span>
@@ -82,9 +94,13 @@ export default function WellBeing360Dashboard({ user }) {
             <span className="weight-diff">Ready to start?</span>
             <span className="weight-helper">Log your first workout to begin tracking.</span>
           </div>
-        </div>
+        </button>
 
-        <div className="premium-card">
+        <button 
+          className="premium-card clickable-card"
+          onClick={() => onNavigate('focusDetail')}
+          style={{ cursor: 'pointer', border: 'none', padding: 0, background: 'none' }}
+        >
           <div className="card-header-row">
             <h3>Daily Focus</h3>
             <span className="badge-pill">Getting started</span>
@@ -97,7 +113,7 @@ export default function WellBeing360Dashboard({ user }) {
             <span className="weight-diff">No goals set yet</span>
             <span className="weight-helper">Create your first habit to start your wellness journey.</span>
           </div>
-        </div>
+        </button>
       </div>
 
       <section className="premium-card dashboard-wellbeing-card">

@@ -11,6 +11,10 @@ import Dashboard from './components/Dashboard';
 import WorkoutForm from './components/WorkoutForm';
 import NutritionForm from './components/NutritionForm';
 import MoodForm from './components/MoodForm';
+import MoodDetailPage from './pages/MoodDetailPage';
+import NutritionDetailPage from './pages/NutritionDetailPage';
+import WorkoutDetailPage from './pages/WorkoutDetailPage';
+import FocusDetailPage from './pages/FocusDetailPage';
 import './styles/App.css';
 
 function App() {
@@ -119,6 +123,17 @@ function App() {
             >
               😊 Log Mood
             </button>
+            {['moodDetail', 'nutritionDetail', 'workoutDetail', 'focusDetail'].includes(activeTab) && (
+              <button
+                className="nav-item back-btn"
+                onClick={() => {
+                  setActiveTab('dashboard');
+                  setSidebarOpen(false);
+                }}
+              >
+                ← Back to Dashboard
+              </button>
+            )}
           </nav>
 
           <button className="logout-btn" onClick={handleLogout}>
@@ -139,10 +154,14 @@ function App() {
           </header>
 
           <div className="content">
-            {activeTab === 'dashboard' && <Dashboard user={user} />}
+            {activeTab === 'dashboard' && <Dashboard user={user} onNavigate={setActiveTab} />}
             {activeTab === 'workout' && <WorkoutForm user={user} onSuccess={handleFormSuccess} />}
             {activeTab === 'nutrition' && <NutritionForm user={user} onSuccess={handleFormSuccess} />}
             {activeTab === 'mood' && <MoodForm user={user} onSuccess={handleFormSuccess} />}
+            {activeTab === 'moodDetail' && <MoodDetailPage user={user} onNavigate={setActiveTab} />}
+            {activeTab === 'nutritionDetail' && <NutritionDetailPage user={user} onNavigate={setActiveTab} />}
+            {activeTab === 'workoutDetail' && <WorkoutDetailPage user={user} onNavigate={setActiveTab} />}
+            {activeTab === 'focusDetail' && <FocusDetailPage user={user} onNavigate={setActiveTab} />}
           </div>
         </main>
       </div>

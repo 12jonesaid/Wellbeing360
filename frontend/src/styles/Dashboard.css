@@ -564,6 +564,20 @@
   box-shadow: 0 15px 35px rgba(15, 23, 42, 0.15);
 }
 
+/* Clickable card styles */
+.clickable-card {
+  transition: all 0.3s ease;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+.clickable-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 60px rgba(18, 73, 37, 0.15);
+  border-color: rgba(16, 185, 129, 0.25);
+}
+
 @media (max-width: 1024px) {
   .dash-premium-grid,
   .stats-badges-grid {
