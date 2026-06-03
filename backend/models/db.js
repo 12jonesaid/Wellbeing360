@@ -17,6 +17,14 @@ const mockData = {
   
   addUser(user) {
     user.id = this.userId++;
+    user.createdAt = user.createdAt || new Date();
+    // Initialize new user with zero data
+    user.stats = {
+      workouts: 0,
+      nutrition: 0,
+      mood: 0,
+      totalMinutes: 0
+    };
     this.users.push(user);
     return user;
   },

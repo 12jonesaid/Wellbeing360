@@ -29,6 +29,13 @@ export default function WellBeing360Dashboard({ user }) {
         </div>
       </section>
 
+      <section className="new-user-welcome" style={{ background: 'linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(16, 185, 129, 0.1))', borderRadius: '24px', padding: '1.5rem', marginTop: '1.5rem', border: '1px solid rgba(16, 185, 129, 0.2)' }}>
+        <h3 style={{ marginTop: 0, color: '#1e5f34', fontSize: '1.1rem', fontWeight: 700 }}>🎯 Starting Your Wellness Journey</h3>
+        <p style={{ margin: '0.5rem 0', color: '#475569', fontSize: '0.95rem' }}>
+          All your data starts from <strong>zero</strong>. Begin tracking your Mood, Nutrition, and Workouts to see your progress and build better habits!
+        </p>
+      </section>
+
       <div className="dash-premium-grid">
         <div className="premium-card">
           <div className="card-header-row">

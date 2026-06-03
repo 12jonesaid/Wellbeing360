@@ -26,4 +26,34 @@ router.post('/login', (req, res) => {
   res.json({ id: user.id, name: user.name, email: user.email });
 });
 
+// Get user profile with data summary
+router.get('/profile/:userId', (req, res) => {
+  const userId = parseInt(req.params.userId);
+  const user = db.getUserById(userId);
+  
+  if (!user) {
+    return res.status(404).json({ error: 'User not found' });
+  }
+  
+  const userWorkouts = db.getWorkoutsByUserId(userId);
+  const userNutrition = db.getNutritionByUserId(userId);
+  const userMood = db.getMoodByUserId(userId);
+  
+  res.json({
+    id: user.id,
+    name: user.name,
+    email: user.email,
+    createdAt: user.createdAt,
+    dataStatus: {
+      workouts: userWorkouts.length,
+      nutritionEntries: userNutrition.length,
+      moodEntries: userMood.length,
+      totalDataPoints: userWorkouts.length + userNutrition.length + userMood.length,
+      message: userWorkouts.length + userNutrition.length + userMood.length === 0 ? 
+        'New user - data starts from zero. Start tracking to see your progress!' : 
+        'User has tracking data'
+    }
+  });
+});
+
 module.exports = router;
